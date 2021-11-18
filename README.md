@@ -1,6 +1,6 @@
 # PyMongo
 
-** This source code communicates with MongoDB (a NoSQL database) to Create, Read, Update, and Delete (CRUD) data. **
+Using MongoDB (a NoSQL database) and Python to Create, Read, Update, and Delete (CRUD) data. 
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------------
 The purpose of this project is to apply database systems concepts and principles in development 
     - This specifically caters to creating a database that can interface with client-side code
@@ -21,18 +21,40 @@ How it works:
         - You will need to know how to do this later when creating, reading, updating, and deleting items. 
  ![enableMongo](https://user-images.githubusercontent.com/71840637/142474435-bff1d74b-5e6c-4e46-adf1-68d9e8db4105.jpg)
  
-3) Importing a database in the terminal 
-- The database is imported into MongoDB. This meets the requirement of using existing data in the database. 
+3) Importing a database (csv file) in the terminal (Mongo import tool) 
+- The database is imported into MongoDB.  
 - Notice, we moved to the file where MongoDB is located through the terminal. 
 - Then used the following command to import the file also located in the same directory. 
     - When the data is imported it will display the amount of document imported or if unsuccessful it will state the amount of documents unsuccessfully imported.
         -   NOTICE: This is done through the terminal, not the Mongo shell
-
+        -   This meets the requirement of using existing data in the database.
 ![AACimported](https://user-images.githubusercontent.com/71840637/142472230-756155ab-9493-4d39-a755-145705fa9263.jpg)
 
+4) Create User Accounts
+- User accounts increase security through user authentication to databases and collections
+- We will create an admin account and a user account for the AAC database we imported
+    - The admin account will have access to all databases, while the AAC user account only has access to the AAC database.
+    
+    ![createAdmin](https://user-images.githubusercontent.com/71840637/142476997-47b91b2d-dad2-4901-8dfc-cd83b059d26a.jpg)
+    ![createUserAAC](https://user-images.githubusercontent.com/71840637/142477051-89857b85-c8c8-4f90-a68a-144c225f75e3.jpg)
+- These screenshots display the mongo commands required to create a new user account. We can adjust specifications to meet the user's privelages. 
+
+5) Develop a CRUD class (create, read, update, delete)
+- Using Python, develop a 'create' object to insert a document into MongoDB database and collection
+    - This program will input an argument to a function that will set a value in the data type acceptable to the MongoDB driver (insert API call)
+         - If successful the result will be returned
+         - If unsuccessful, the result will return False
+- Using Python, develop a 'read' object that querries a document(s) from the database or collection 
+    - Uses key/value lookup pair to use with MongoDB driver (find API call) 
+        - if successful return results
+        - if unsuccessful, return an error message 
+![AnimalShelter](https://user-images.githubusercontent.com/71840637/142479240-216a9329-a5b9-4351-9f76-734193719eb9.jpg)
+
+- _more functionality will be added to AnimalShelter.py file in the coming sprint to incorporate all aspects of CRUD into the database
+
+===================================================================================================================================================================
 
 
-**(Ensure MongoDB and Python are installed on the device which you are using the database on. )**
     A demonstration of how it works (its functional operations)
     An identification of the tools used and a rationale for why those tools were chosen
     An explanation of how to reproduce the project
