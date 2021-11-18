@@ -34,9 +34,9 @@ How it works:
 - User accounts increase security through user authentication to databases and collections
 - We will create an admin account and a user account for the AAC database we imported
     - The admin account will have access to all databases, while the AAC user account only has access to the AAC database.
-    
     ![createAdmin](https://user-images.githubusercontent.com/71840637/142476997-47b91b2d-dad2-4901-8dfc-cd83b059d26a.jpg)
     ![createUserAAC](https://user-images.githubusercontent.com/71840637/142477051-89857b85-c8c8-4f90-a68a-144c225f75e3.jpg)
+    
 - These screenshots display the mongo commands required to create a new user account. We can adjust specifications to meet the user's privelages. 
 
 5) Develop a CRUD class (create, read, update, delete)
@@ -52,10 +52,33 @@ How it works:
 
 - _more functionality will be added to AnimalShelter.py file in the coming sprint to incorporate all aspects of CRUD into the database
 
-===================================================================================================================================================================
+--
+More on the Tools Used: 
+- MongoDB  -- Instalation: https://docs.mongodb.com/guides/server/install/
+    - A document database for application development and cloud. MongoDB is powerful because it uses nodes when adding data to share the load.
+    - Access documents and collections with high-availability and the ability to scale as your data grows.
+    - Mongo has a large collection of documentation on how to use their tools. Check out the mongo Documentation section of their website for detailed information about all things mongo related. 
+    - If you'd like to learn more about MongoDB here's a link to their main webiste which breaks it down completely.
+        - https://www.mongodb.com/basics 
+- mongo shell 
+    - This is where the magic is happening. 
+    - All commmands are entered here and CRUD can be used
+    - Here is more information about the shell 
+        - https://docs.mongodb.com/manual/reference/program/mongo/#mongodb-binary-bin.mongo
+- mongoimport 
+    -  We used this command in the terminal to import our database. 
+    -  I have been using linux so these commands are relevant to my OS. However, here is a link to where you can an OS: https://docs.mongodb.com/guides/server/import/
+    -  Where <> replacce with your authentication. If you have not created authentication yet, omit the second lines. 
 
-
-    A demonstration of how it works (its functional operations)
-    An identification of the tools used and a rationale for why those tools were chosen
-    An explanation of how to reproduce the project
+      mongoimport --db test --collection inventory 
+          --authenticationDatabase admin -u <user> -p <password>
+          --drop --file ~\downloads\inventory.crud.json
+- Create User
+    - Creating a user secures your databases through authentication!
+    - In the mongo shell, complete the commands as listed in step 4 of How It Works or refer to the link for more specific instructions
+        -  https://docs.mongodb.com/guides/server/auth/index.html
+- Understanding CRUD
+    - There are more operating that can be implemented using CRUD than are listed in this documentatio so far. 
+    - As stated above we know CRUD stands for create, read, update, and delete. This increases the functionality of our database.
+    - For more information on CRUD operations: https://docs.mongodb.com/manual/crud/
 
