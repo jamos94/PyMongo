@@ -20,7 +20,13 @@ How it works:
     - Locate where they in your file system and follow the commands below to access the mongo shell.
         - You will need to know how to do this later when creating, reading, updating, and deleting items. 
  ![enableMongo](https://user-images.githubusercontent.com/71840637/142474435-bff1d74b-5e6c-4e46-adf1-68d9e8db4105.jpg)
-3) The database is imported into MongoDB. This meets the requirement of using existing data in the database. Notice, we moved to the file where mongoDB is located through the terminal. Then used the following command to import the file also located in the same directory. When the data is imported it will display the amount of document imported or if unsuccessful it will state the amount of documents unsuccessfully imported. 
+ 
+3) Importing a database in the terminal 
+- The database is imported into MongoDB. This meets the requirement of using existing data in the database. 
+- Notice, we moved to the file where MongoDB is located through the terminal. 
+- Then used the following command to import the file also located in the same directory. 
+    - When the data is imported it will display the amount of document imported or if unsuccessful it will state the amount of documents unsuccessfully imported.
+        -   NOTICE: This is done through the terminal, not the Mongo shell
 
 ![AACimported](https://user-images.githubusercontent.com/71840637/142472230-756155ab-9493-4d39-a755-145705fa9263.jpg)
 
