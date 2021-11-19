@@ -50,6 +50,12 @@ How it works:
         - if unsuccessful, return an error message 
 ![AnimalShelter](https://user-images.githubusercontent.com/71840637/142479240-216a9329-a5b9-4351-9f76-734193719eb9.jpg)
 
+6) Develop a testing script
+- a test script will ensure functionality of the database's new functions, read and insert. 
+- This is a .ipynb file.
+- If it is funtional the output will be True
+![testScript](https://user-images.githubusercontent.com/71840637/142642716-645d08ff-288c-4365-98ee-e4b1ca2da991.jpg)
+
 - _more functionality will be added to AnimalShelter.py file in the coming sprint to incorporate all aspects of CRUD into the database
 
 --
