@@ -19,7 +19,8 @@ How it works:
     - MongoDB and Python should be installed on your computer. If not, proceed to install. 
     - Locate where they in your file system and follow the commands below to access the mongo shell.
         - You will need to know how to do this later when creating, reading, updating, and deleting items. 
- ![enableMongo](https://user-images.githubusercontent.com/71840637/142474435-bff1d74b-5e6c-4e46-adf1-68d9e8db4105.jpg)
+![enableMongo](https://user-images.githubusercontent.com/71840637/143285034-04cfb086-8e96-4217-a9b2-f23e98173a17.jpg)
+
  
 3) Importing a database (csv file) in the terminal (Mongo import tool) 
 - The database is imported into MongoDB.  
@@ -33,14 +34,19 @@ How it works:
 4) Create User Accounts
 - User accounts increase security through user authentication to databases and collections
 - We will create an admin account and a user account for the AAC database we imported
-    - The admin account will have access to all databases, while the AAC user account only has access to the AAC database.
-    ![createAdmin](https://user-images.githubusercontent.com/71840637/142476997-47b91b2d-dad2-4901-8dfc-cd83b059d26a.jpg)
-    ![createUserAAC](https://user-images.githubusercontent.com/71840637/142477051-89857b85-c8c8-4f90-a68a-144c225f75e3.jpg)
+    - The admin account will have access to all databases, while the AAC user account only has access to the AAC database
+    - the user should database should be associated with the database they will need access to
+    - I had to go back and adjust this users db and roles for AAC and readWrite as shown it possess in the 2nd image
+    - after you create an account, run the commands in the second screenshot to preview your new user and double check roles
+    ![createUserAAC](https://user-images.githubusercontent.com/71840637/143290020-709bd547-d95c-4992-80d8-6d96d0c84cf3.jpg)
+    ![aacuserInAACdb](https://user-images.githubusercontent.com/71840637/143289623-4194adb5-8ce3-4a29-a9a9-a5db476f3149.jpg)
+
     
 - These screenshots display the mongo commands required to create a new user account. We can adjust specifications to meet the user's privelages. 
 
 5) Develop a CRUD class (create, read, update, delete)
 - Using Python, develop a 'create' object to insert a document into MongoDB database and collection
+- ensure that you adjust the port number to the port listed when you began mongoDB in step one
     - This program will input an argument to a function that will set a value in the data type acceptable to the MongoDB driver (insert API call)
          - If successful the result will be returned
          - If unsuccessful, the result will return False
@@ -48,12 +54,16 @@ How it works:
     - Uses key/value lookup pair to use with MongoDB driver (find API call) 
         - if successful return results
         - if unsuccessful, return an error message 
+- UPDATE
+- DELETE
 ![AnimalShelter](https://user-images.githubusercontent.com/71840637/142479240-216a9329-a5b9-4351-9f76-734193719eb9.jpg)
 
 6) Develop a testing script
 - a test script will ensure functionality of the database's new functions, read and insert. 
 - This is a .ipynb file.
 - If it is funtional the output will be True
+- UPDATE
+- DELETE
 ![testScript](https://user-images.githubusercontent.com/71840637/142642716-645d08ff-288c-4365-98ee-e4b1ca2da991.jpg)
 
 - _more functionality will be added to AnimalShelter.py file in the coming sprint to incorporate all aspects of CRUD into the database
@@ -88,3 +98,11 @@ More on the Tools Used:
     - As stated above we know CRUD stands for create, read, update, and delete. This increases the functionality of our database.
     - For more information on CRUD operations: https://docs.mongodb.com/manual/crud/
 
+-Jupyter
+    - when using juypter to access and test the database, ensure that mongo is running in the database that you would like to use.
+        - mongo -u "aacuser" --authenticationDatabase "AAC" -p
+            - this will prompt for password
+        -once mongo is accessed through the appropriate user switch to that data base using the 'use dbs' command
+            - use AAC
+        - now you should be able open jupyter and run the files successfully
+        ![scriptTestSUCCESS](https://user-images.githubusercontent.com/71840637/143291079-ef8abebf-580d-4c54-b9e1-e478dfcfd807.jpg)
