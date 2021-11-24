@@ -64,6 +64,7 @@ How it works:
 - If it is funtional the output will be True
 - UPDATE
 - DELETE
+
 ![testScript](https://user-images.githubusercontent.com/71840637/142642716-645d08ff-288c-4365-98ee-e4b1ca2da991.jpg)
 
 - _more functionality will be added to AnimalShelter.py file in the coming sprint to incorporate all aspects of CRUD into the database
@@ -97,12 +98,11 @@ More on the Tools Used:
     - There are more operating that can be implemented using CRUD than are listed in this documentatio so far. 
     - As stated above we know CRUD stands for create, read, update, and delete. This increases the functionality of our database.
     - For more information on CRUD operations: https://docs.mongodb.com/manual/crud/
-
--Jupyter
-    - when using juypter to access and test the database, ensure that mongo is running in the database that you would like to use.
+- Jupyter
+    -  when using juypter to access and test the database, ensure that mongo is running in the database that you would like to use.
         - mongo -u "aacuser" --authenticationDatabase "AAC" -p
             - this will prompt for password
-        -once mongo is accessed through the appropriate user switch to that data base using the 'use dbs' command
+    - once mongo is accessed through the appropriate user switch to that data base using the 'use dbs' command
             - use AAC
-        - now you should be able open jupyter and run the files successfully
+    - now you should be able open jupyter and run the files successfully
         ![scriptTestSUCCESS](https://user-images.githubusercontent.com/71840637/143291079-ef8abebf-580d-4c54-b9e1-e478dfcfd807.jpg)
