@@ -1,6 +1,6 @@
 # PyMongo
 
-Using MongoDB and Python to Create, Read, Update, and Delete (CRUD) data. 
+Using MongoDB and Python to Create, Read, Update, and Delete (CRUD) data with an interactive user interface
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------------
 The purpose of this project is to apply database systems concepts and principles in development 
     - This specifically caters to creating a database that can interface with client-side code
