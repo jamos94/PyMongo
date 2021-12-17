@@ -54,20 +54,20 @@ How it works:
     - Uses key/value lookup pair to use with MongoDB driver (find API call) 
         - if successful return results
         - if unsuccessful, return an error message 
-- UPDATE
-- DELETE
-![AnimalShelter](https://user-images.githubusercontent.com/71840637/142479240-216a9329-a5b9-4351-9f76-734193719eb9.jpg)
+![CRUD](https://user-images.githubusercontent.com/71840637/146575914-286e7680-d2d5-4911-99c4-e759f3f8020f.jpg)
 
 6) Develop a testing script
 - a test script will ensure functionality of the database's new functions, read and insert. 
 - This is a .ipynb file.
 - If it is funtional the output will be True
-- UPDATE
-- DELETE
+![scriptTestSUCCESS](https://user-images.githubusercontent.com/71840637/146576080-c2e1f09e-f350-4a45-9f7e-a336a6b0e6cc.jpg)
 
-![testScript](https://user-images.githubusercontent.com/71840637/142642716-645d08ff-288c-4365-98ee-e4b1ca2da991.jpg)
+7) Create a user interface
+- Create another ipynb notebook and develop code using plotly and dash to integrate front-end user functionality. 
+- User interfaces can be constructed using tables, graphs and maps to display data. Sorting and filters are added for user interaction with the data. 
+ ![image](https://user-images.githubusercontent.com/71840637/146576231-56fedfda-2afa-4481-8800-fb497bf08afe.png)
 
-- _more functionality will be added to AnimalShelter.py file in the coming sprint to incorporate all aspects of CRUD into the database
+-more specific types of filtering can be used through building queries, adding buttons, slides, or drop downs. You can also set the table to be editable if needed. In this case the data is only being displayed so it is not. See plotly dash for specifics
 
 --
 More on the Tools Used: 
